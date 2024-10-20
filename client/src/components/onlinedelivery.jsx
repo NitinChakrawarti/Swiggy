@@ -6,7 +6,7 @@ const Onlinedelivery = () => {
     const [online, setonline] = React.useState([]);
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch('https://swiggyapi-nitin.vercel.app/top-restaurant-chains');
+            const data = await fetch('https://swiggy-copy2.vercel.app/top-restaurant-chains');
             const response = await data.json();
             setonline(response);
         }

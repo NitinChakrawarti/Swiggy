@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 const Category = () => {
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch('https://swiggyapi-nitin.vercel.app/categories');
+            const data = await fetch('https://swiggy-copy2.vercel.app/categories');
             const response = await data.json();
             setCategories(response);
         }
