@@ -12,10 +12,10 @@ function App() {
     <>
       <Navbar />
       <Category />
-      {/* <Topresto />
+      <Topresto />
       <Onlinedelivery />
       <Bestplace />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }
