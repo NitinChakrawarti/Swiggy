@@ -19,27 +19,27 @@ const Navbar = () => {
         setShow(false)
     }
 
-    const navitems =[
+    const navitems = [
         {
-            title:'Search',
-            icon:<FaSearch className=' text-[20px] text-black/70  ' />
+            title: 'Search',
+            icon: <FaSearch className=' text-[20px] text-black/70  ' />
         },
         {
-            title:'Offers',
-            icon:<BiSolidOffer className=' text-[20px] text-black/70  ' />,
+            title: 'Offers',
+            icon: <BiSolidOffer className=' text-[20px] text-black/70  ' />,
             power: 'New'
         },
         {
-            title:'Support',
-            icon:<BiSupport className=' text-[20px] text-black/70  ' />
+            title: 'Support',
+            icon: <BiSupport className=' text-[20px] text-black/70  ' />
         },
         {
-            title:'Profile',
-            icon:<MdPerson className=' text-[20px] text-black/70  ' />
+            title: 'Profile',
+            icon: <MdPerson className=' text-[20px] text-black/70  ' />
         },
         {
-            title:'Cart',
-            icon:<CiShoppingCart className=' text-[20px] text-black/70  ' />,
+            title: 'Cart',
+            icon: <CiShoppingCart className=' text-[20px] text-black/70  ' />,
             power: '2'
         }
     ]
@@ -47,7 +47,7 @@ const Navbar = () => {
     return (
         <>
 
-            <div className="bg-black/90 w-full h-full fixed duration-500" style={
+            <div className="bg-black/90 w-full h-full fixed duration-500 z-50" style={
                 {
                     opacity: show ? 1 : 0,
                     visibility: show ? 'visible' : 'hidden'
@@ -61,12 +61,18 @@ const Navbar = () => {
                             left: show ? '0' : '-500px',
                         }
                     }
-                ></div>
+                >
+                    
+                    <div className="flex flex-col items-center justify-center gap-10 mt-10 pt-32">
+                       
+                  <h1 className="cursor-pointer" onClickCapture={hidesidemenu}>close</h1>
+                    </div>
+                </div>
             </div>
-            <header className='p-[15px] shadow-xl'>
+            <header className='p-[15px] shadow-xl sticky top-0  z-50 bg-white'>
                 <div className="max-w-[1200px] mx-auto flex items-center justify-between">
                     <div className="flex items-center">
-                        <div className="w-[70px]">
+                        <div className="w-[50px]">
                             <img className="w-full" src={logo} />
                         </div>
                         <div className=" flex gap-2">
@@ -74,8 +80,8 @@ const Navbar = () => {
                             <RxCaretDown className='inline text-primary font-bold text-[30px] cursor-pointer' onClick={togglesidemenu} />
                         </div>
                     </div>
-                    <nav className="">
-                        <ul className="max-w-[1200px] mx-auto flex  justify-between gap-10"> 
+                    <nav className=" md:flex hidden">
+                        <ul className="max-w-[1200px] mx-auto flex  justify-between gap-10">
                             {
                                 navitems.map((item, index) => {
                                     return (
