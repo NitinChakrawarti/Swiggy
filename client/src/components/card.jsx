@@ -4,7 +4,7 @@ const Card = (props) => {
     return (
         <div className='w-[273px] shrink-0 grow hover:scale-95 duration-300'>
             <div className="h-[182px] rounded-[15px] overflow-hidden relative ">
-                <img src={"http://localhost:5000/images/" + props.image} className='w-full h-full object-cover' alt="" />
+                <img src={"https://swiggyapi-nitin.vercel.app/images/" + props.image} className='w-full h-full object-cover' alt="" />
                 <div className=" gradientcolorlinear w-full h-full absolute top-0 flex text-[25px] font-semibold tracking-tighter text-white items-end p-2">
                     {props.offer}
                 </div>

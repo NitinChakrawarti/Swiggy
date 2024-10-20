@@ -52,7 +52,7 @@ const Category = () => {
                                     <div key={index} className="w-[150px] shrink-0 duration-500 " style={
                                         { transform: `translateX(-${slide * 100}%)` }
                                     }>
-                                        <img src={"https://swiggyapi-nitin.vercel.app/images/" + category.image} alt="" />
+                                        <img src={"https://swiggyapi-nitin.vercel.app/images/"+category.image} alt="" />
                                     </div>
                                 )
                             })
